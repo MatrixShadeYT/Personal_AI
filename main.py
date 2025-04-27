@@ -13,4 +13,4 @@ nn.layers = [
 
 value = nn.output(inputs)
 for i in range(len(value)):
-    print(f'N{i+1}: {tokenizer[round(int(value[i]),0)]} {value[i]}')
+    print(f'N{i+1}: "{tokenizer[round(int(value[i]),0)]}" {value[i]}')
