@@ -15,5 +15,5 @@ value = nn.output(inputs)
 output = []
 for i in range(len(value)):
     output.append(tokenizer[round(int(value[i])*len(tokenizer),0)])
-    print(f'N{i+1}: {value[i]}')
+    print(f'N{i+1}: {output[i]} {value[i]}')
 print(output)
