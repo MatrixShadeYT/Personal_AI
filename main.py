@@ -1,8 +1,13 @@
 from neural_network import model, Layer_Dense
 
-inputed = 3
+inputed = 1
 outputed = 2
 model = model([
     Layer_Dense(0,5,inputed),
     Layer_Dense('SM',outputed,5)
 ])
+
+value = model.output([1])
+print(value)
+value = model.output([0])
+print(value)
