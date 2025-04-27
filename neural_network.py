@@ -10,7 +10,12 @@ layers = []
 def output(inputs):
     inputs = inputs
     for i in range(len(layers)):
+        print(f'Inputs: {inputs}')
+        print(f'Activation: {layers[i][0]}')
+        print(f'Biases: {layers[i][1]}')
+        print(f'Weights: {layers[i][2]}')
         inputs = Layer_Output(i,inputs)
+        print(f'Output: {inputs}')
     return inputs
 
 def Layer_Dense(activation,neurons,inputs):
