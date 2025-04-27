@@ -7,7 +7,7 @@ nn.layers = [
     nn.Layer_Dense('SM',5,outputed)
 ]
 
-value = model.output([1])
+value = nn.output([1])
 print(value)
-value = model.output([0])
+value = nn.output([0])
 print(value)
