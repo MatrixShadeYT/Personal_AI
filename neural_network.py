@@ -22,7 +22,7 @@ class Layer_Dense:
     def __init__(self,activation=0,neurons=0,inputs=1):
         self.activation = activation
         if isinstance(neurons,int):
-            self.generate(int(neurons),inputs)
+            self.generate(neurons,inputs)
         else:
             self.biases, self.weights = neurons
     def setData(self,biases,weights):
@@ -41,5 +41,5 @@ class Layer_Dense:
             return self.output
     def generate(self,neurons,inputs):
         neurons = [i for i in range(neurons)]
-        self.biases = np.zeros(1,neurons)
+        self.biases = np.zeros((1,neurons))
         self.weights = np.random.randn(neurons,inputs)
