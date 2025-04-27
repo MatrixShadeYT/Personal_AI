@@ -11,7 +11,7 @@ def output(inputs):
     inputs = inputs
     for i in range(len(layers)):
         print(inputs)
-        weights = np.transpose(layers[i][2]) # [[],[]]
+        weights = layers[i][2] # [[],[]]
         print(weights)
         biases = layers[i][1] # []
         print(f'{biases}\n')
