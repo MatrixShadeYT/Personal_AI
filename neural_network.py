@@ -18,7 +18,7 @@ class model:
             x = np.transpose(self.layers[i][2])
             for y in range(len(x)):
                 print(f'Weights[{y}]: {x[y]}')
-            print(f'biases: {self.layers[i][1]}')
+            print(f'biases: {self.layers[i][1]}\n')
             x = np.dot([inputs],x)
             x += self.layers[i][1]
             '''if self.layers[i][0] == 'ReLu':
