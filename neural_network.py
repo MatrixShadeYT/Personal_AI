@@ -22,7 +22,7 @@ class Layer_Dense:
     def __init__(self,activation=0,data=0,inputs=1):
         self.activation = activation
         if isinstance(data,int):
-            self.biases, self.weights = self.generate(data,inputs)
+            self.generate(data,inputs)
         else:
             self.biases, self.weights = data
     def setData(self,biases,weights):
