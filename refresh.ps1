@@ -1,0 +1,3 @@
+rm ..\Personal_AI -Recurse -Force;
+git clone https://github.com/MatrixShadeYT/Personal_AI.git;
+clear
