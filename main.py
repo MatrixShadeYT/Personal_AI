@@ -12,4 +12,4 @@ nn.layers = [
 ]
 
 value = nn.output(inputs)
-print('Bot: '+''.join([tokenizer[round(int(value[i]),0)] for i in range(len(value))]))
+print('Bot: "'+''.join([tokenizer[round(int(value[i]),0)] for i in range(len(value))])+'"')
