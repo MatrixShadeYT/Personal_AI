@@ -19,7 +19,7 @@ class model:
             for y in range(len(np.transpose(self.layers[i][2]))):
                 print(f'Weights[{y}]: {np.transpose(self.layers[i][2])[y]}')
             print('\n')
-            x = np.dot([inputs],x)
+            x = np.dot([inputs],np.transpose(self.layers[i][2]))
             x += self.layers[i][1]
             '''if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
