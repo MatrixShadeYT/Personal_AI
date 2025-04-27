@@ -16,14 +16,14 @@ def output(inputs):
         biases = layers[i][1] # []
         print(f'{biases}\n')
         x = np.dot(inputs,weights)
-        x += biases
+        '''x += biases
         if layers[i][0] == 'SM':
             inputs = np.exp(x-np.max(x,axis=1,keepdims=True)) / np.sum(np.exp(x-np.max(x,axis=1,keepdims=True)),axis=1,keepdims=True)
         elif layers[i][0] == 'ReLu':
             inputs = np.maximum(0,x)
         else:
             inputs = x
-    return inputs
+    return inputs'''
 
 def Layer_Dense(activation,neurons,inputs):
     return [
