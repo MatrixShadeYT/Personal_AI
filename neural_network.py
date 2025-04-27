@@ -15,7 +15,7 @@ class model:
         inputs = inputs
         for i in range(len(self.layers)):
             print(f'inputs: {inputs}')
-            x = self.layers[i][2]
+            x = np.transpose(self.layers[i][2])
             for y in range(len(x)):
                 print(f'Weights[{y}]: {x[y]}')
             print('\n')
