@@ -14,4 +14,5 @@ nn.layers = [
 value = nn.output(inputs)
 for i in range(len(value)):
     print(f'N{i+1}: {value[i]}')
-    print(f'T{i+1}: {tokenizer[round(int(value[i])*len(tokenizer),0)]}')
+    x = 0 if tokenizer[round(int(value[i])*len(tokenizer),0)] == '' else tokenizer[round(int(value[i])*len(tokenizer),0)]
+    print(f'T{i+1}: {x}')
