@@ -4,7 +4,7 @@ inputed = 1
 outputed = 2
 nn.layers = [
     nn.Layer_Dense(0,5,inputed),
-    nn.Layer_Dense('SM',5,outputed)
+    nn.Layer_Dense('SM',outputed,5)
 ]
 
 value = nn.output([1])

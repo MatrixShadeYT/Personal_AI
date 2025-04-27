@@ -24,8 +24,8 @@ def output(inputs):
             inputs = x
     return inputs
 
-def Layer_Dense(activation,inputs,outputs):
+def Layer_Dense(activation,neurons,inputs):
     return [
-        activation,np.zeros((inputs,1))[0],
-        np.random.randn(inputs,outputs)
+        activation,np.zeros((neurons,1))[0],
+        np.random.randn(neurons,inputs)
     ]
