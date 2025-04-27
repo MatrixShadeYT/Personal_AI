@@ -16,10 +16,9 @@ class model:
         for i in range(len(self.layers)):
             print(f'inputs: {inputs}')
             print(f'biases: {self.layers[i][1]}')
-            for y in range(len(self.layers[i][2])):
-                print(f'Weights[{y}]: {self.layers[i][2][y]}')
+            for y in range(len(np.transpose(self.layers[i][2]))):
+                print(f'Weights[{y}]: {np.transpose(self.layers[i][2])[y]}')
             print('\n')
-            x = np.transpose(self.layers[i][2])
             x = np.dot([inputs],x)
             x += self.layers[i][1]
             '''if self.layers[i][0] == 'ReLu':
