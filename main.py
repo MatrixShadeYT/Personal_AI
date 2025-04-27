@@ -1,12 +1,16 @@
 import neural_network as nn
+import string
 
-inputed = 1
-outputed = 2
+tokenizer = list(' ,.!?*:'+string.ascii_letters)
+chat = input('Shade: ')
+inputs = []
+for i in chat.split(' '):
+    inputs.append(tokenizer.index(i))
 nn.layers = [
-    nn.Layer_Dense(0,5,inputed),
-    nn.Layer_Dense('SM',outputed,5)
+    nn.Layer_Dense(0,5,len(inputs)),
+    nn.Layer_Dense('SM',5,5)
 ]
 
-value = nn.output([1])
+value = nn.output(inputs)
 for i in range(len(value)):
     print(f'N{i+1}: {value[i]}')
