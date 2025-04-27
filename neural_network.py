@@ -15,11 +15,11 @@ class model:
         inputs = inputs
         for i in range(len(self.layers)):
             print(f'inputs: {inputs}')
-            print(f'biases: {self.layers[i][1]}')
             for y in range(len(self.layers[i][2])):
                 print(f'Weights[{y}]: {self.layers[i][2][y]}')
             print('\n')
             x = np.dot([inputs],self.layers[i][2])
+            print(f'biases: {self.layers[i][1]}')
             x += self.layers[i][1]
             '''if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
