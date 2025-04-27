@@ -1,3 +1,1 @@
-rm ..\Personal_AI -Recurse -Force;
-git clone https://github.com/MatrixShadeYT/Personal_AI.git;
-clear
+cd ..; rm .\Personal_AI -Recurse -Force; git clone https://github.com/MatrixShadeYT/Personal_AI.git; cd .\Shadow; clear;
