@@ -2,7 +2,10 @@ from random import randint
 import numpy as np
 
 def Layer_Dense(activation,inputs,outputs):
-    return [activation,np.zeros((inputs,1))[0],np.random.randn(outputs,inputs)]
+    return [
+        activation,np.zeros((inputs,1))[0],
+        np.random.randn(outputs,inputs)
+    ]
 
 # Model Class - [Layer]
 class model:
@@ -11,10 +14,11 @@ class model:
     def output(self,inputs):
         inputs = inputs
         for i in range(len(self.layers)):
-            print(f'\ninputs: {inputs}')
+            print(f'inputs: {inputs}')
             print(f'biases: {self.layers[i][1]}')
             for y in range(len(self.layers[i][2])):
                 print(f'Weights[{y}]: {self.layers[i][2][y]}')
+            print('\n')
             x = np.transpose(self.layers[i][2])
             x = np.dot([inputs],x)
             x += self.layers[i][1]
