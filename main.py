@@ -7,7 +7,7 @@ model = model([
     Layer_Dense('SM',outputed,5)
 ])
 
-value = model.output([1,0])
+value = model.output([1])
 print(value)
-value = model.output([0,1])
+value = model.output([0])
 print(value)
