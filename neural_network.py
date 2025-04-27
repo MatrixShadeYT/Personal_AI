@@ -11,9 +11,10 @@ class model:
     def output(self,inputs):
         inputs = inputs
         for i in range(len(self.layers)):
-            x = np.dot([inputs],self.layers[i][2])
-            print(x)
-            x += self.layers[i][1]
+            print('\ninputs: '+inputs)
+            print('biases: '+self.layers[i][1])
+            print('weights: '+self.layers[i][2])
+            x = np.dot([inputs],self.layers[i][2])+self.layers[i][1]
             if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
             elif self.layers[i][0] == 'SM':
