@@ -13,11 +13,13 @@ def output(inputs):
         weights = layers[i][2] # [[],[]]
         biases = layers[i][1] # []
         x = np.dot(inputs,weights)+biases
-        # SM
         if layers[i][0] == 'SM':
             inputs = np.exp(x-np.max(x,axis=1,keepdims=True)) / np.sum(np.exp(x-np.max(x,axis=1,keepdims=True)),axis=1,keepdims=True)
-        elif layers[]
-
+        elif layers[i][0] == 'ReLu':
+            inputs = np.maximum(0,x)
+        else:
+            inputs = x
+    return inputs
 
 def Layer_Dense(activation,inputs,outputs):
     return [
