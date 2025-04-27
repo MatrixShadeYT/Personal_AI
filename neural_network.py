@@ -16,10 +16,10 @@ class model:
             for y in range(len(self.layers[i][2])):
                 print(f'Weights[{y}]: {self.layers[i][2][y]}')
             x = np.dot([inputs],self.layers[i][2])+self.layers[i][1]
-            if self.layers[i][0] == 'ReLu':
+            '''if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
             elif self.layers[i][0] == 'SM':
                 inputs = np.exp(x-np.max(x,axis=1,keepdims=True)) / np.sum(np.exp(x-np.max(x,axis=1,keepdims=True)),axis=1,keepdims=True)
             else:
-                inputs = x
+                inputs = x'''
         return inputs
