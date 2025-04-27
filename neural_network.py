@@ -40,5 +40,6 @@ class Layer_Dense:
         else:
             return self.output
     def generate(self,neurons,inputs):
+        neurons = [i for i in range(neurons)]
         self.biases = np.zeros(1,neurons)
         self.weights = np.random.randn(neurons,inputs)
