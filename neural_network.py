@@ -14,10 +14,9 @@ class model:
     def output(self,inputs):
         inputs = inputs
         for i in range(len(self.layers)):
-            print(f'inputs: {inputs}')
             x = np.transpose(self.layers[i][2])[0]
-            for y in range(len(x)):
-                print(f'Weights[{y}]: {x[y]}')
+            print(f'inputs: {inputs}')
+            print(f'Weights: {x}')
             print(f'biases: {self.layers[i][1]}\n')
             x = np.dot(inputs,x)
             x += self.layers[i][1]
