@@ -8,6 +8,5 @@ nn.layers = [
 ]
 
 value = nn.output([1])
-print(value)
-value = nn.output([0])
-print(value)
+for i in range(len(value)):
+    print(f'N{i+1}: {value[i]}')
