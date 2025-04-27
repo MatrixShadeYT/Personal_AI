@@ -1,7 +1,7 @@
 import neural_network as nn
 import string
 
-tokenizer = list(',.!?*:'+string.ascii_letters)
+tokenizer = list(' ,.!?*:'+string.ascii_letters)
 chat = input('Shade: ')
 inputs = []
 for i in list(chat):
@@ -12,5 +12,4 @@ nn.layers = [
 ]
 
 value = nn.output(inputs)
-for i in range(len(value)):
-    print(f'N{i+1}: "{tokenizer[round(int(value[i]),0)]}" {value[i]}')
+print('Output: "'.join([tokenizer[round(int(value[i]),0)] for i in range(len(value))])+'"')
