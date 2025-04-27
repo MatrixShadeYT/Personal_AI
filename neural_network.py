@@ -15,7 +15,7 @@ class model:
             print(f'biases: {self.layers[i][1]}')
             for y in range(len(self.layers[i][2])):
                 print(f'Weights[{y}]: {self.layers[i][2][y]}')
-            x = np.dot([inputs],self.layers[i][2])
+            x = np.dot([inputs],np.transpose(self.layers[i][2]))
             x += self.layers[i][1]
             '''if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
