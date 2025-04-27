@@ -3,8 +3,8 @@ from neural_network import model, Layer_Dense
 inputed = 1
 outputed = 2
 model = model([
-    Layer_Dense(0,5,inputed),
-    Layer_Dense('SM',outputed,5)
+    Layer_Dense(0,inputed,5),
+    Layer_Dense('SM',5,outputed)
 ])
 
 value = model.output([1])
