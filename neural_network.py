@@ -19,12 +19,12 @@ class model:
 
 # Layer Class - [biases,[weights]]
 class Layer_Dense:
-    def __init__(self,activation=0,data=0,inputs=1):
+    def __init__(self,activation=0,neurons=0,inputs=1):
         self.activation = activation
-        if isinstance(data,int):
-            self.generate(data,inputs)
+        if isinstance(neurons,int):
+            self.generate(neurons,inputs)
         else:
-            self.biases, self.weights = data
+            self.biases, self.weights = neurons
     def setData(self,biases,weights):
         self.biases, self.weights = biases, weights
     def getData(self):
@@ -39,6 +39,6 @@ class Layer_Dense:
             return self.SM
         else:
             return self.output
-    def generate(self,data,inputs):
-        self.biases = np.zeros(1,data)
-        self.weights = np.random.randn(data,inputs)
+    def generate(self,neurons,inputs):
+        self.biases = np.zeros(1,neurons)
+        self.weights = np.random.randn(neurons,inputs)
