@@ -4,7 +4,7 @@ inputed = 1
 outputed = 2
 model = model([
     Layer_Dense(0,inputed,5),
-    Layer_Dense('SM',5,outputed)
+    Layer_Dense('SM',outputed,5)
 ])
 
 value = model.output([1])
