@@ -4,7 +4,7 @@ import string
 tokenizer = list(' ,.!?*:'+string.ascii_letters)
 chat = input('Shade: ')
 inputs = []
-for i in chat.split(' '):
+for i in chat.split():
     inputs.append(tokenizer.index(i))
 nn.layers = [
     nn.Layer_Dense(0,5,len(inputs)),
