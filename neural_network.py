@@ -11,7 +11,7 @@ def output(inputs):
     inputs = inputs
     for i in range(len(layers)):
         inputs = Layer_Output(i,inputs)
-    return inputs
+    return inputs[0]
 
 def Layer_Dense(activation,neurons,inputs):
     return [
