@@ -12,16 +12,17 @@ def output(inputs):
     for i in range(len(layers)):
         print(f'Inputs: {inputs}')
         print(f'Activation: {layers[i][0]}')
-        print(f'Biases: \n{np.transpose(layers[i][1])}')
-        print(f'Weights: \n{np.transpose(layers[i][2])}\n')
+        print(f'Biases: \n{layers[i][1]}')
+        print(f'Weights: \n{layers[i][2]}\n')
         inputs = Layer_Output(i,inputs)
         print(f'Output: {inputs}')
     return inputs
 
 def Layer_Dense(activation,neurons,inputs):
     return [
-        activation,np.zeros((neurons,1)),
-        np.random.randn(neurons,inputs)
+        activation,
+        np.transpose(np.zeros((neurons,1))),
+        np.transpose(np.random.randn(neurons,inputs))
     ]
 
 def Layer_Output(num,inputs):
