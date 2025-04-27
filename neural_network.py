@@ -2,7 +2,7 @@ from random import randint
 import numpy as np
 
 def Layer_Dense(activation,inputs,outputs):
-    return [activation,np.zeros((inputs,1)),np.random.randn(outputs,inputs)]
+    return [activation,np.zeros((1,inputs)),np.random.randn(outputs,inputs)]
 
 # Model Class - [Layer]
 class model:
@@ -11,8 +11,8 @@ class model:
     def output(self,inputs):
         inputs = inputs
         for i in range(len(self.layers)):
-            x = np.dot(inputs,self.layers[i][1])
-            x += self.layers[i][2]
+            x = np.dot(inputs,self.layers[i][2])
+            x += self.layers[i][1]
             if self.layers[i][0] == 'ReLu':
                 inputs = np.maximum(0,x)
             elif self.layers[i][0] == 'SM':
