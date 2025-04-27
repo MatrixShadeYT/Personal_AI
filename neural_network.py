@@ -2,7 +2,7 @@ from random import randint
 import numpy as np
 
 def Layer_Dense(activation,inputs,outputs):
-    return [activation,np.zeros((1,inputs))[0],np.random.randn(outputs,inputs)]
+    return [activation,np.zeros((1,inputs)),np.random.randn(inputs,outputs)]
 
 # Model Class - [Layer]
 class model:
