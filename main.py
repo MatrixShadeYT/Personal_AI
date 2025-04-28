@@ -3,7 +3,7 @@ import string
 
 tokenizer = list(' ,.!?*:'+string.ascii_letters)
 inputs = 2
-outputs = 5
+outputs = 2
 model = nn.Model([
     nn.Layer_Dense(act='SM',neurons=outputs,inputs=inputs)
 ])
