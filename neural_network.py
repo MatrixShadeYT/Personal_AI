@@ -16,7 +16,7 @@ class Genetic_algorithm:
         self.base = model
         self.population = [self.mutate(model) for i in range(size)]
     def mutate(self,model):
-        return
+        return model
     def fitness(self):
         return
 
