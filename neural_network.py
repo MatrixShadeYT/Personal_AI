@@ -14,7 +14,9 @@ class Genetic_algorithm:
     def __init__(self,gens,size,model):
         self.batch = [gens,size]
         self.base = model
-        self.population = [mutate(model) for i in range(size)]
+        self.population = [self.mutate(model) for i in range(size)]
+    def mutate(self,model):
+        return
     def fitness(self):
         return
 
