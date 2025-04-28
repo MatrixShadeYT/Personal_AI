@@ -18,7 +18,7 @@ class Model:
         for i in range(len(self.layers)):
             inputs = self.layer_output(i,inputs)
         return inputs[0]
-    def layer_output(num,inputs):
+    def layer_output(self,num,inputs):
         act, biases, weights = self.layers[num]
         x = np.dot(inputs,weights)+biases
         if act == 'SM':
