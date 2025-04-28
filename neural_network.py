@@ -10,6 +10,14 @@ def Layer_Dense(act,neurons,inputs):
         np.transpose(np.random.randn(neurons,inputs))
     ]
 
+class Genetic_algorithm:
+    def __init__(self,gens,size,model):
+        self.batch = [gens,size]
+        self.base = model
+        self.population = [mutate(model) for i in range(size)]
+    def fitness(self):
+        return
+
 class Model:
     def __init__(self,layers):
         self.layers = layers
