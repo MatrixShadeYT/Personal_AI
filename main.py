@@ -8,4 +8,4 @@ nn.layers = [
 ]
 
 value = nn.output(inputs)
-print('Output: '+''.join([f', {value[i]}' for i in range(len(value))]))
+print('Output: '+''.join([f'{value[i]} ' for i in range(len(value))]))
