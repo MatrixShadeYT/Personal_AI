@@ -3,9 +3,9 @@ import numpy as np
 
 layers = []
 
-def Layer_Dense(activation,neurons,inputs):
+def Layer_Dense(act,neurons,inputs):
     return [
-        activation,
+        act,
         np.transpose(np.zeros((neurons,1))),
         np.transpose(np.random.randn(neurons,inputs))
     ]
