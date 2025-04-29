@@ -1,4 +1,3 @@
-from random import randint
 import numpy as np
 
 layers = []
@@ -10,19 +9,11 @@ def Layer_Dense(act,neurons,inputs):
         np.transpose(np.random.randn(neurons,inputs))
     ]
 
-class Genetic_algorithm:
-    def __init__(self,gens,size,model):
-        self.batch = [gens,size]
-        self.base = model
-        self.population = [self.mutate(model) for i in range(size)]
-    def mutate(self,model):
-        return model
-    def fitness(self):
-        return
-
 class Model:
     def __init__(self,layers):
         self.layers = layers
+    def model(self):
+        return self.layers
     def output(self,inputs):
         inputs = inputs
         for i in range(len(self.layers)):
